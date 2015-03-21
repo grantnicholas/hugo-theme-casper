@@ -44,6 +44,7 @@ Copyright = "All rights reserved - 2015"
   description = "this is my description"
   cover = "images/cover.jpg"
   author = "Valère JEANTET"
+<<<<<<< HEAD
   authorlocation = "Paris, France"
   authorwebsite = "http://vjeantet.fr"
   bio= "my bio"
@@ -51,6 +52,14 @@ Copyright = "All rights reserved - 2015"
   googleAnalyticsUserID = "UA-79101-12"
   githubName = "vjeantet"
   twitterName = "vjeantet"
+=======
+  logo = "images/logo.png"
+  bio= "my bio"
+  googleAnalyticsUserID = "UA-79101-12"
+
+[permalinks]
+  post = "/:slug/"
+>>>>>>> 6f597bb493ca6bb58f3baecb5aaa9d9bca35ff2c
 
 ```
 
@@ -82,6 +91,8 @@ Example of a menu definition in main config file,
 
 ## Metadata on each content file, example
 
+**example post**
+
 ``` markdown
 +++
 date = "2014-07-11T10:54:24+02:00"
@@ -95,6 +106,7 @@ comments = true
 
 Contents here
 ```
+
 
 ## Create new content based with default metadata from this theme
 You can easyly create a new content with all metadatas used by this theme, using this command 

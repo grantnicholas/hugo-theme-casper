@@ -242,6 +242,7 @@ h6 {
 a {
     color: #4A4A4A;
     transition: color 0.3s ease;
+    transition: color ease 0.3s;
 }
 
 a:hover {
@@ -470,6 +471,7 @@ margin on the iframe, cause it breaks stuff. */
     vertical-align: middle;
 }
 
+
 /* Wraps the main content & footer */
 .site-wrapper {
     position: relative;
@@ -488,7 +490,6 @@ body.nav-opened .site-wrapper {
     -webkit-transition: -webkit-transform 0.3s ease;
             transition: transform 0.3s ease;
 }
-
 
 /* ==========================================================================
    4. General - The main styles for the the theme
@@ -706,7 +707,6 @@ body.nav-opened .nav {
     font-size: 9px;
     margin-right: 6px;
 }
-
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
 .scroll-down {
@@ -1310,6 +1310,7 @@ body:not(.post-template) .post-title {
     margin: 0;
     font-size: 1.4rem;
 }
+
 .gist td {
     line-height: 1.4;
 }
@@ -1627,6 +1628,7 @@ body:not(.post-template) .post-title {
     .no-cover .main-nav.overlay {
         background: none;
     }
+
     .no-cover .main-nav.overlay .menu-button {
         border: none;
     }

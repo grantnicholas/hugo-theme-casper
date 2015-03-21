@@ -4,6 +4,6 @@ draft = false
 title = "Post title"
 slug = "post-title"
 tags = ["tag1","tag2"]
-image = ""
+image = "images/chicago_skyline.jpg"
 comments = true
 +++

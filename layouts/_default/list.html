@@ -9,6 +9,7 @@
 	<header class="main-header tag-head no-cover">
 {{end}}
     <nav class="main-nav overlay clearfix">
+
       {{ if .Site.Params.logo }}
         <a class="blog-logo" href="{{.Site.BaseUrl}}"><img src="{{.Site.BaseUrl}}{{ .Site.Params.logo }}" alt="Home" /></a>
       {{end}}
@@ -17,6 +18,7 @@
       {{else}}
           <a class="menu-button icon-feed" href="{{ .RSSLink }}">&nbsp;&nbsp;Subscribe</a>
       {{end}}
+
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
