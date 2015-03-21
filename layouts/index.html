@@ -1,0 +1,58 @@
+{{ partial "header.html" . }}
+
+{{if .Site.Params.cover}}
+<header class="main-header " style="background-image: url({{.Site.BaseUrl}}{{.Site.Params.cover}})">
+{{else}}
+<header class="main-header no-cover">
+{{end}}
+    
+    <nav class="main-nav overlay clearfix">
+        {{ if .Site.Params.logo }}
+            <a class="blog-logo" href="{{ .Permalink }}"><img src="{{.Site.BaseUrl}}{{ .Site.Params.logo }}" alt="Blog Logo" /></a>
+        {{end}}
+        <a class="subscribe-button icon-feed" href="{{ .RSSLink }}">Subscribe</a>
+    </nav>
+    <div class="vert">
+        <div class="main-header-content inner">
+            {{ if .Site.Params.githubName }}
+                <a class="bloglogo" href="https://github.com/{{ .Site.Params.githubName }}">
+                <span class="icon-github" style="color:white;font-size:2em"></span>
+                </a>
+            {{end}}
+            &nbsp;
+            {{ if .Site.Params.twitterName }}
+                <a class="bloglogo" href="https://twitter.com/{{ .Site.Params.twitterName }}">
+                    <span class="icon-twitter" style="color:white;font-size:2em"></span>
+                </a>
+            {{end}}
+            <h1 class="page-title">{{ .Site.Title }}</h1>
+            <h2 class="page-description">{{ .Site.Params.description }}</h2>
+            <div id="searchbar">
+                <img class="spinner" src="/imgs/spinner.png" />
+                <script type="text/jsx;harmony=true" src="{{.Site.BaseUrl}}js/searchbar.js"></script>
+            </div>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+
+
+</header>
+
+
+<main id="content" class="content" role="main">
+
+    {{ $paginator := .Paginator }}
+
+    <div class="extra-pagination inner">
+        {{ partial "pagination.html" $paginator }}
+    </div>
+
+    {{ range $index, $page := .Paginator.Pages }}
+        {{ .Render "li" }}
+    {{ end }}
+
+    {{ partial "pagination.html" $paginator }}
+
+</main>
+
+{{ partial "footer.html" . }}
